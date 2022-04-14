@@ -97,7 +97,9 @@ After a successful build, the program can be simulated by issuing the following 
 make run-sim
 ```
 
-After a few seconds two windows will open, one the RENODE monitor and one for UART monitor. 
+After a few seconds two windows will open, one the RENODE monitor and one for UART monitor. The UART terminal will print hello world as shown in the following screenshot
+
+[Hello World](Resources/Images/Running.jpg)
 
 **[Back to top](#table-of-contents)**
 
