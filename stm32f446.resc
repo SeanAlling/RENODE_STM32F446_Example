@@ -1,0 +1,22 @@
+:name: STM32F446 Renode Example
+:description: Example "Hello World" program running on STM32F446 through RENODE.
+
+
+
+$name?="RENODE Example STM32f4"
+mach create $name
+machine LoadPlatformDescription @platforms/cpus/stm32f4.repl
+
+
+: Watch USART1 for data transmitted
+showAnalyzer sysbus.usart1
+
+
+
+macro reset
+"""
+    sysbus LoadELF $CWD/Software/build/STM32F446-Nucleo-Template-RENODE.elf
+    start
+"""
+
+runMacro $reset

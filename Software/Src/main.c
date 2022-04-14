@@ -113,6 +113,7 @@ int main(void)
 void SystemClock_Config(void)
 {
   #if !defined(RENODE_SIMULATION)
+
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 

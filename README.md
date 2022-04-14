@@ -74,13 +74,13 @@ git clone https://github.com/SeanAlling/RENODE_STM32F446_Example.git
 Make is used to build the application. From the root directory, issue the following command to build the application.
 
 ```
-make build
+make build-sim
 ```
 
 By default make uses one thread to build. If you would like make to use all available threads then use the following command. 
 
 ```
-make build -j
+make build-sim -j
 ```
 
 A clean command is also given which will delete all files generated during the build process. 
@@ -89,23 +89,15 @@ A clean command is also given which will delete all files generated during the b
 make clean
 ```
 
-Last a rebuild command is provided which will clean and then rebuild the system. 
-
-```
-make rebuild
-```
-
-
-
-
 ### Usage
 
-After buildinf
+After a successful build, the program can be simulated by issuing the following command
+
 ```
-Examples should be included
+make run-sim
 ```
 
-If your project provides an API, either provide details for usage in this document or link to the appropriate API reference documents
+After a few seconds two windows will open, one the RENODE monitor and one for UART monitor. 
 
 **[Back to top](#table-of-contents)**
 
