@@ -99,7 +99,7 @@ make run-sim
 
 After a few seconds two windows will open, one the RENODE monitor and one for UART monitor. The UART terminal will print hello world as shown in the following screenshot
 
-[Hello World](Resources/Images/Running.jpg)
+![Hello World](Resources/Images/Running.png)
 
 **[Back to top](#table-of-contents)**
 
@@ -113,7 +113,7 @@ The following resoirces can be used to learn more about simulating with RENODE:
 
 1. [Cortex-M MCU Emulation with Renode](https://interrupt.memfault.com/blog/intro-to-renode)
 2. [RENODE Documentation](https://renode.readthedocs.io/en/latest/)
-3. [](https://www.zephyrproject.org/developing-zephyr-rtos-embedded-applications-on-platformio-and-simulating-on-antmicro-renode/)
+3. [Developing Zephyr RTOS embedded applications on PlatformIO and simulating on Antmicro Renode](https://www.zephyrproject.org/developing-zephyr-rtos-embedded-applications-on-platformio-and-simulating-on-antmicro-renode/)
 
 **[Back to top](#table-of-contents)**
 
