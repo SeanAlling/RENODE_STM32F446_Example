@@ -97,7 +97,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+        // Blocking UART Tx
+    HAL_UART_Transmit(&huart1, message_HelloWorld, size_HelloWorld, 1);
+    // Transmit string every 1 second.
+    HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -109,7 +112,7 @@ int main(void)
   */
 void SystemClock_Config(void)
 {
-
+  #if !defined(RENODE_SIMULATION)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
@@ -156,7 +159,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-
+  #endif
 }
 
 /* USER CODE BEGIN 4 */

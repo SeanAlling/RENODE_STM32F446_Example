@@ -13,7 +13,13 @@
 ######################################
 # target
 ######################################
+
+ifdef RENODE
+TARGET = STM32F446-Nucleo-Template-RENODE
+else
 TARGET = STM32F446-Nucleo-Template
+endif
+
 
 
 ######################################
@@ -87,6 +93,9 @@ BIN = $(CP) -O binary -S
 #######################################
 # CFLAGS
 #######################################
+# RENODE flag 
+RENODE = $(RENODE_FLAG)
+
 # cpu
 CPU = -mcpu=cortex-m4
 
@@ -124,7 +133,7 @@ C_INCLUDES =  \
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
-CFLAGS += $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+CFLAGS += $(MCU) $(RENODE) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2
